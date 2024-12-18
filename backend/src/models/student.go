@@ -8,7 +8,7 @@ import (
 // Student model
 type Student struct {
 	gorm.Model
-	UserId         *uint     `gorm:"unique"`                                         // Nullable to allow SET NULL
+	UserID         *uint     `gorm:"unique"`                                         // Nullable to allow SET NULL
 	User           User      `gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"` // One-to-One relationship
 	School         string    `gorm:"size:32;not null"`
 	YearInSchool   uint      `gorm:"not null"`

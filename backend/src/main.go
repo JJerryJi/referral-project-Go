@@ -50,7 +50,7 @@ func main() {
 	// Create a Gin router
 	r := gin.Default()
 
-	routers.Register(db, r)
+	routers.Register(db, r, rdb)
 
 	// Start the web server
 	log.Println("Server running at http://localhost:8080")
